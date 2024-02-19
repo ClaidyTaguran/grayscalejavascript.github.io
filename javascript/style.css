@@ -1,0 +1,227 @@
+/* Add your CSS styles here */
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 20px; /* Increased padding for better spacing */
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #8cd7ec; /* Light sandy beige background */
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px; /* Adjusted width for larger screens */
+    padding: 30px;
+    background: #FFF6EB; /* Light cream background */
+    border-radius: 20px; /* Increased border radius for softer edges */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container.disable .editor-panel,
+.container.disable .controls .reset-filter,
+.container.disable .controls .save-img {
+    opacity: 0.8; /* Reduced opacity for disabled elements */
+    pointer-events: none;
+}
+
+.container h2 {
+    margin-top: -8px;
+    font-size: 24px; /* Increased font size for headings */
+    font-weight: 600; /* Increased font weight for headings */
+    color: #4E6E5D; /* Soft greenish-blue color for headings */
+}
+
+.container .wrapper {
+    display: flex;
+    margin: 20px 0;
+    min-height: 335px;
+    flex-wrap: wrap; /* Added flex-wrap for smaller screens */
+    justify-content: space-between; /* Added for even spacing */
+}
+
+.wrapper .editor-panel {
+    padding: 15px;
+    width: calc(50% - 10px); /* Adjusted width for smaller screens */
+    border-radius: 10px; /* Increased border radius for softer edges */
+    border: 1px solid #D2CCC4; /* Soft gray border */
+    background: #FAF3E0; /* Light peach background */
+}
+
+.images-container {
+    width: calc(50% - 10px); /* Adjusted width for smaller screens */
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-img,
+.before-edit-img {
+    margin-bottom: 20px; /* Increased space between images */
+    border-radius: 10px; /* Increased border radius for softer edges */
+    overflow: hidden;
+    background: #F3EAD7; /* Light sandy beige background */
+}
+
+.editor-panel .title {
+    display: block;
+    font-size: 18px; /* Increased font size for titles */
+    margin-bottom: 12px;
+    color: #4E6E5D; /* Soft greenish-blue color for titles */
+}
+
+.editor-panel .options,
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.editor-panel button {
+    outline: none;
+    height: 40px;
+    font-size: 14px;
+    color: #4E6E5D; /* Soft greenish-blue color for buttons */
+    background: #FFF6EB; /* Light cream background for buttons */
+    border-radius: 5px; /* Increased border radius for softer edges */
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
+    border: 1px solid #1795c7; /* Soft gray border */
+    cursor: pointer; /* Added cursor pointer for buttons */
+    transition: all 0.3s ease; /* Smooth transition for button hover */
+}
+
+.editor-panel button:hover {
+    background: #F3EAD7; /* Light sandy beige background on hover */
+}
+
+.filter button.active {
+    color: #FFF;
+    background: #4E6E5D; /* Soft greenish-blue color for active buttons */
+    border-color: #4E6E5D; /* Soft greenish-blue border for active buttons */
+}
+
+.filter .slider {
+    margin-top: 12px;
+}
+
+.filter .slider .filter-info {
+    display: flex;
+    color: #4E6E5D; /* Soft greenish-blue color for filter info */
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.filter .slider input {
+    width: 100%;
+    height: 5px;
+    accent-color: #4E6E5D; /* Soft greenish-blue color for slider */
+}
+
+.editor-panel .rotate {
+    margin-top: 17px;
+}
+
+.editor-panel .rotate button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 4 - 3px);
+}
+
+.rotate .options button:nth-child(3),
+.rotate .options button:nth-child(4) {
+    font-size: 18px;
+}
+
+.rotate .options button:active {
+    color: #FFF;
+    background: #4E6E5D; /* Soft greenish-blue color for active buttons */
+    border-color: #4E6E5D; /* Soft greenish-blue border for active buttons */
+}
+
+.preview-img img,
+.before-edit-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.controls button {
+    padding: 11px 20px;
+    font-size: 14px;
+    border-radius: 5px; /* Increased border radius for softer edges */
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.controls .reset-filter {
+    background: #A78E74; /* Soft brownish color for reset filter button */
+    border: 1px solid #A78E74; /* Soft brownish border for reset filter button */
+}
+
+.controls .reset-filter:hover {
+    background: #7F6F62; /* Darker brownish color on hover for reset filter button */
+    border-color: #7F6F62; /* Darker brownish border on hover for reset filter button */
+}
+
+.controls .choose-img {
+    background: #4E6E5D; /* Soft greenish-blue color for choose image button */
+    border: 1px solid #4E6E5D; /* Soft greenish-blue border for choose image button */
+}
+
+.controls .save-img {
+    margin-left: 5px;
+    background: #A78E74; /* Soft brownish color for save image button */
+    border: 1px solid #A78E74; /* Soft brownish border for save image button */
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        padding: 25px;
+    }
+
+    .container .wrapper {
+        flex-wrap: wrap-reverse;
+    }
+
+    .wrapper .editor-panel {
+        width: 100%;
+    }
+
+    .images-container {
+        width: 100%;
+        margin: 0 0 20px; /* Adjusted margin for better spacing */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .editor-panel,
+    .images-container {
+        width: 100%; /* Adjusting width for smaller screens */
+    }
+
+    .controls button {
+        width: 100%;
+        margin-bottom: 15px; /* Increased margin for better spacing */
+    }
+
+    .controls .row {
+        width: 100%;
+    }
+
+    .controls .row .save-img {
+        margin-left: 0px;
+    }
+}

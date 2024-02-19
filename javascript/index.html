@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Image Editor</title>
+    
+</head>
+<body>
+    <div class="container disable">
+        <h2>Claidy's Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <!-- Adjust Section -->
+                <div class="adjust">
+                    <label class="title">Adjust</label>
+                    <div class="options">
+                        <!-- Add your adjust buttons/sliders here -->
+                        <button id="opacity">Opacity</button>
+                        <button id="contrast">Contrast</button>
+                        <button id="blur">Blur</button>
+                    </div>
+                    <div class="slider">
+                        <!-- Add your sliders for adjust here -->
+                        <div class="filter-info">
+                            <p class="name">Opacity</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="100">
+                    </div>
+                </div>
+                <!-- Filters Section -->
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <!-- Add your filter buttons here -->
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="grayscale">Grayscale</button>
+                        <button id="black-n-white">Black n White</button> <!-- Changed id -->
+                        <button id="sepia">Sepia</button> <!-- Added button for Sepia -->
+                        <button id="saturate">Saturate</button> <!-- Added button for Saturate -->
+                        <!-- Add more filter buttons here -->
+                        <button id="filter1">Filter 1</button>
+                        <button id="filter2">Filter 2</button>
+                        <button id="filter3">Filter 3</button>
+                        <button id="filter4">Filter 4</button>
+                        <button id="filter5">Filter 5</button>
+                        <button id="filter6">Filter 6</button>
+                        <button id="filter7">Filter 7</button>
+                        <button id="filter8">Filter 8</button>
+                        <button id="filter9">Filter 9</button>
+                        <button id="filter10">Filter 10</button>
+                    </div>
+                    <div class="slider">
+                        <!-- Add your sliders for filters here -->
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <!-- Rotate Section -->
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="images-container">
+                <div class="preview-img">
+                    <img id="previewImage" src="./assets/image-placeholder.svg" alt="preview-img">
+                </div>
+                <div class="before-edit-img">
+                    <img id="beforeEditImage" src="./assets/image-placeholder.svg" alt="before-edit-img">
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input id="fileInput" type="file" class="file-input" accept="image/*" hidden>
+                <button id="chooseImageBtn" class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
